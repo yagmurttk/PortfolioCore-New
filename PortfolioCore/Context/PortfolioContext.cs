@@ -15,5 +15,6 @@ namespace PortfolioCore.Context
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<Skill> Skills { get; set; }
     }
 }
