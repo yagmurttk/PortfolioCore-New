@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\MyResume-1.0.0\.DS_Store" />
+    <None Include="wwwroot\MyResume-1.0.0\assets\.DS_Store" />
     <None Include="wwwroot\sidebar-03\.DS_Store" />
     <None Include="wwwroot\sidebar-03\css\.DS_Store" />
     <None Include="wwwroot\sidebar-03\css\bootstrap\.DS_Store" />
@@ -30,6 +32,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.18" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
 </Project>

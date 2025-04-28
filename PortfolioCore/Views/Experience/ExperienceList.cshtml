@@ -5,7 +5,7 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h1>Deneyim Listesi</h1>
+<h3>Deneyim Listesi</h3>
 
 <table class="table table-bordered">
     <tr>
@@ -14,8 +14,8 @@
         <th>Alt Başlık</th>
         <th>Açıklama</th>
         <th>Tarih</th>
-        <th>Sil</th>
         <th>Güncelle</th>
+        <th>Sil</th>
     </tr>
     @foreach (var item in Model)
     {
@@ -25,10 +25,12 @@
             <td>@item.SubTitle</td>
             <td>@item.Description</td>
             <td>@item.ExperienceDate</td>
-            <td><a href="/Experience/DeleteExperience/@item.ExperienceId" class=" btn btn-danger">Sil</a></td>
-            <td><a href="/Experience/UpdateExperience/@item.ExperienceId" class=" btn btn-success">Güncelle</a></td>
+            <td><a href="/Experience/UpdateExperience/@item.ExperienceId" class=" btn btn-outline-success">Güncelle</a></td>
+            <td><a href="/Experience/DeleteExperience/@item.ExperienceId" class=" btn btn-outline-danger">Sil</a></td>
+
+
         </tr>
     }
 </table>
-<a href="/Experience/CreateExperience/" class="btn btn-primary">Yeni Deneyim Girişi</a>
+<a href="/Experience/CreateExperience/" class="btn btn-outline-primary col-md-12">Yeni Deneyim Girişi</a>
 

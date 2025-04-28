@@ -1,0 +1,23 @@
+﻿@model List<Feature>
+
+<section id="hero" class="hero section light-background">
+    @foreach (var item in Model)
+    {
+        <img src="@item.FeatureImageURL" style="width:100%;" alt="">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+
+                    <h2>@item.FeatureNameSurname</h2>
+                    <p>Çalışma alanlarım: <span class="typed" data-typed-items="@item.FeatureTitle1, @item.FeatureTitle2,@item.FeatureTitle3"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+
+
+
+                    @await Component.InvokeAsync("_DefaultSocialMediaComponentPartial")
+
+                </div>
+            </div>
+        </div>
+    }
+</section>

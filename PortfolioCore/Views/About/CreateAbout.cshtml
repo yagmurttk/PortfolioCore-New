@@ -1,0 +1,36 @@
+﻿@model About
+
+@{
+    ViewData["Title"] = "CreateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Hakkımda Ekleme Sayfası</h3>
+<br />
+
+<form method="post" asp-action="CreateAbout" asp-controller="About" enctype="multipart/form-data">
+
+    <label>Açıklama</label>
+    <input type="text" class="form-control" asp-for="Description" style="border:1px solid grey; " />
+    <br />
+    <label>Alan</label>
+    <input type="text" class="form-control" asp-for="JobTitle" style="border:1px solid grey;" />
+    <br />
+    <label>Görsel Seç</label>
+    <input type="file" class="form-control" name="file" style="border:1px solid grey;" />
+    <br />
+    <label>Mail Adresi</label>
+    <input type="text" class="form-control" asp-for="Email" style="border:1px solid grey;" />
+    <br />
+    <label>Telefon Numarası</label>
+    <input type="text" class="form-control" asp-for="Phone" style="border:1px solid grey;" />
+    <br />
+    <label>Şehir</label>
+    <input type="text" class="form-control" asp-for="City" style="border:1px solid grey;" />
+    <br />
+    <label>Alt Açıklama</label>
+    <input type="text" class="form-control" asp-for="SubDescription" style="border:1px solid grey; " />
+    <br />
+
+    <button class="btn btn-outline-primary col-md-12" type="submit">Ekle</button>
+</form>

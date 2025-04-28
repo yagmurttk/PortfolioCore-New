@@ -1,0 +1,90 @@
+﻿
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @await Component.InvokeAsync("_DefaultHeadComponentPartial")
+</head>
+
+<body class="index-page">
+
+    @await Component.InvokeAsync("_DefaultSidebarComponentPartial")
+
+    <main class="main">
+
+
+        <!-- Hero Section -->
+        @await Component.InvokeAsync("_DefaultFeatureComponentPartial")
+        <!-- /Hero Section -->
+        <!-- About Section -->
+        @await Component.InvokeAsync("_DefaultAboutComponentPartial")
+
+        <!-- /About Section -->
+        <!-- Stats Section -->
+        <section id="stats" class="stats section">
+
+            @await Component.InvokeAsync("_DefaultStatisticsComponentPartial")
+
+        </section>
+
+        <!-- /Stats Section -->
+        <!-- Skills Section -->
+        @await Component.InvokeAsync("_DefaultSkillComponentPartial")
+
+        <!-- /Skills Section -->
+        <!-- Resume Section -->
+        <section id="resume" class="resume section">
+
+            <!-- Section Title -->
+
+            <!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row">
+
+
+
+                    @await Component.InvokeAsync("_DefaultEducationComponentPartial")
+
+                    @await Component.InvokeAsync("_DefaultExperienceComponentPartial")
+
+                </div>
+
+            </div>
+
+        </section><!-- /Resume Section -->
+        <!-- Portfolio Section -->
+        @await Component.InvokeAsync("_DefaultPortfolioComponentPartial")
+
+        <!-- /Portfolio Section -->
+        <!-- Services Section -->
+        <section id="services" class="services section">
+
+            @await Component.InvokeAsync("_DefaultServiceComponentPartial")
+
+        </section>
+        <!-- /Services Section -->
+        <!-- Testimonials Section -->
+        @await Component.InvokeAsync("_DefaultTestimonialComponentPartial")
+
+        <!-- /Testimonials Section -->
+        <!-- Contact Section -->
+        @await Component.InvokeAsync("_DefaultContactComponentPartial")
+        <!-- /Contact Section -->
+
+    </main>
+
+
+    @await Component.InvokeAsync("_DefaultFooterComponentPartial")
+
+
+    @await Component.InvokeAsync("_DefaultScriptsComponentPartial")
+
+</body>
+
+</html>

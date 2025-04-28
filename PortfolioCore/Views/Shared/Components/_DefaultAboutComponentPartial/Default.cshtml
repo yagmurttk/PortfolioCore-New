@@ -1,0 +1,42 @@
+﻿@model List<About>
+
+
+<section id="about" class="about section">
+    @foreach (var item in Model)
+    {
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Hakkımda</h2>
+
+            <p>@item.Description</p>
+        </div>
+
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row gy-4 justify-content-center">
+                <div class="col-lg-4">
+                    <img src="/images/@item.ImageURL" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-8 content">
+                    <h2>@item.JobTitle</h2>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Mail Adresim:</strong> <span>@item.Email</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Telefon Numaram:</strong> <span>@item.Phone</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Şehir:</strong> <span>@item.City</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="py-3">
+                        @item.SubDescription
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    }
+</section>
+<!-- /About Section -->

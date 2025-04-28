@@ -1,0 +1,20 @@
+﻿@model List<SocialMedia>
+
+<footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+        <h3 class="sitename">Yağmur Tetik</h3>
+        <p>Beni sosyal medya hesaplarımdan takip edebilirsiniz.</p>
+        <div class="social-links d-flex justify-content-center">
+            @foreach (var item in Model)
+            {
+                <a href="@item.SocialMediaUrl"><i class="@item.SocialMediaIcon"></i></a>
+            }
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                <span>Copyright</span> <strong class="px-1 sitename">Yağmur Tetik</strong> <span>Tüm haklarım saklıdır.</span>
+            </div>
+        </div>
+    </div>
+</footer>
